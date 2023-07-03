@@ -1,0 +1,26 @@
+version: 1
+formatters:
+  simple:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: simple
+    stream: ext://sys.stdout
+loggers:
+  log_config:
+    level: ERROR
+    handlers: [console]
+    propagate: yes
+  log_config.module1:
+    level: DEBUG
+    handlers: [console]
+    propagate: no
+  log_config.module3.submodule3:
+    level: CRITICAL
+    handlers: [console]
+    propagate: yes
+root:
+  level: DEBUG
+  handlers: [console]

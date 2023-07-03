@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "log-config"
+version = "0.1.2"
+description = ""
+authors = ["Ruud Cools <ruud.cools@ns.nl>"]
+packages = [{include = "log_config"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+pyyaml = "^6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
